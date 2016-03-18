@@ -18,7 +18,7 @@ float GetMandelbrot(vec2 point)
 	{
 		i++;
 //		currPoint = ComplexMul(currPoint, currPoint) + point;
-		currPoint = ComplexMul(currPoint, currPoint) + vec2(-0.8+0.01*sin(time), 0.156);
+		currPoint = ComplexMul(currPoint, currPoint) + vec2(-0.8 + 0.01*sin(time), 0.156);
 	}
 	return i / maxIterations;
 }
@@ -26,7 +26,7 @@ float GetMandelbrot(vec2 point)
 
 void main() //всегда void
 {
-	
+
 	vec2 windowSize = vec2(300.0, 300.0);
 	vec2 complexCoord = minPoint + (maxPoint - minPoint) * gl_FragCoord.xy / windowSize;
 
