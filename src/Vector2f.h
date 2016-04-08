@@ -1,73 +1,27 @@
-#include <vector>
+#pragma once
 #include <iostream>
-#include <string>
-#include <math.h>
-
-
-void Print(int val) // Function overload: same names, different arguments
+struct Vector2f
 {
-        std::cout << val << "\n";
-}
+  float x, y;
 
-void Print(float val)
-{
-        std::cout << val << "\n";
-}
+  Vector2f();
 
-struct Vector2f 
-{
-        Vector2f() // Constructor
-        {
-           //     std::cout << "Constructor called\n";
-                x = 0.0f;
-                y = 0.0f;
-        }
-        Vector2f(float _x, float _y) // Constructor overload
-        {
-           //     std::cout << "Constructor called\n";
-                x = _x;
-                this->y = _y; // Possible if we don't want "_"
-        }
-        ~Vector2f() // Destructor
-        {
-  //              std::cout << "Destructor called\n";
-        }
+  Vector2f(float x, float y);
+  Vector2f(float ang);
 
-        void Print()
-        {
-                std::cout <<
-                        "x: " << x << "\n" <<
-                        "y: " << y << "\n";
-        }
-		float Length()
-		{
-			return sqrtf(x * x + y * y);
-		}
-
-		Vector2f GetNorm()
-		{
-			return Vector2f(x / Length(), y / Length());
-		}
-		float x, y;
+  Vector2f operator *=(float d);
+  Vector2f operator +=(Vector2f right);
+  Vector2f operator -=(Vector2f right);
+  float SquareLength();
+  float Length();
+  Vector2f GetPerpendicular();
+  Vector2f GetNorm();
+  void Print();
 };
 
-Vector2f operator +(Vector2f v0, Vector2f v1) // Operator overloadff
-{
-        return Vector2f(v0.x + v1.x, v0.y + v1.y);
-}
-
-Vector2f operator -(Vector2f v0, Vector2f v1) // Operator overloadff
-{
-        return Vector2f(v0.x - v1.x, v0.y - v1.y);
-}
-
-Vector2f operator *(Vector2f v0, float a) // Operator overloadff
-{
-        return Vector2f(v0.x * a, v0.y * a);
-}
-
-Vector2f operator /(Vector2f v0, float a) // Operator overloadff
-{
-	return Vector2f(v0.x / a, v0.y / a);
-}
-
+Vector2f operator +(Vector2f left, Vector2f right);
+Vector2f operator -(Vector2f left, Vector2f right);
+Vector2f operator *(Vector2f v, float d);
+Vector2f operator *(float d, Vector2f v);
+float operator ^(Vector2f v0, Vector2f v1);
+float operator *(Vector2f v1, Vector2f v2);
