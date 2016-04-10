@@ -78,6 +78,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Boy.cpp" />
+    <ClCompile Include="..\..\src\Bullet.cpp" />
     <ClCompile Include="..\..\src\Furniture.cpp" />
     <ClCompile Include="..\..\src\GameSystem.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
@@ -88,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Boy.h" />
+    <ClInclude Include="..\..\src\Bullet.h" />
     <ClInclude Include="..\..\src\Furniture.h" />
     <ClInclude Include="..\..\src\GameSystem.h" />
     <ClInclude Include="..\..\src\Monster.h" />

@@ -9,6 +9,7 @@
     <ClCompile Include="..\..\src\StaticObj.cpp" />
     <ClCompile Include="..\..\src\Monster.cpp" />
     <ClCompile Include="..\..\src\Furniture.cpp" />
+    <ClCompile Include="..\..\src\Bullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\ParticleSystem.h" />
@@ -19,5 +20,6 @@
     <ClInclude Include="..\..\src\StaticObj.h" />
     <ClInclude Include="..\..\src\Monster.h" />
     <ClInclude Include="..\..\src\Furniture.h" />
+    <ClInclude Include="..\..\src\Bullet.h" />
   </ItemGroup>
 </Project>

@@ -2,6 +2,8 @@
 #include "Vector2f.h"
 #include <SFML/Graphics.hpp>
 #include <map>
+#include <string>
+using namespace std;
 
 class Camera
 {
@@ -29,14 +31,17 @@ public:
 		sf::RenderWindow *wnd,
 		Vector2f screenPospos,
 		float screenAng,
-		Vector2f screenSize
+		Vector2f screenSize,
+		string orientation
 		);
 	void DrawWorldspace(
 		sf::RenderWindow *wnd,
 		Vector2f pos,
 		float ang,
 		Vector2f size,
-		Camera cam);
+		Camera cam,
+		string orientation
+		);
 private:
 
 	static std::map<std::string, sf::Texture *> textures;

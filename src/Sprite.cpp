@@ -21,7 +21,8 @@ void Sprite::DrawScreenspace(
 	sf::RenderWindow *wnd,
 	Vector2f pos,
 	float ang,
-	Vector2f size
+	Vector2f size,
+	string orientation
 	)
 {
 	sf::Vertex vertices[4];
@@ -43,10 +44,20 @@ void Sprite::DrawScreenspace(
 	vertexPos = pos - xVector*size.x + yVector * size.y;
 	vertices[3].position = sf::Vector2f(vertexPos.x, vertexPos.y);
 	
-	vertices[2].texCoords = sf::Vector2f(0.0f, 0.0f);
-	vertices[1].texCoords = sf::Vector2f(tex->getSize().x, 0.0f);
-	vertices[0].texCoords = sf::Vector2f(tex->getSize().x, tex->getSize().y);
-	vertices[3].texCoords = sf::Vector2f(0.0f, tex->getSize().y);
+	if (orientation == "right")
+	{
+		vertices[0].texCoords = sf::Vector2f(tex->getSize().x, tex->getSize().y);
+		vertices[1].texCoords = sf::Vector2f(tex->getSize().x, 0.0f);
+		vertices[2].texCoords = sf::Vector2f(0.0f, 0.0f);
+		vertices[3].texCoords = sf::Vector2f(0.0f, tex->getSize().y);
+	}
+	else
+	{
+		vertices[3].texCoords = sf::Vector2f(tex->getSize().x, tex->getSize().y); 
+		vertices[2].texCoords = sf::Vector2f(tex->getSize().x, 0.0f);
+		vertices[1].texCoords = sf::Vector2f(0.0f, 0.0f);
+		vertices[0].texCoords = sf::Vector2f(0.0f, tex->getSize().y);
+	}
 	
 	wnd->draw(vertices, 4, sf::Quads, tex);
 }
@@ -56,7 +67,9 @@ void Sprite::DrawWorldspace(
 	Vector2f pos,
 	float ang,
 	Vector2f size,
-	Camera cam)
+	Camera cam,
+	string orientation
+	)
 {
 	float pi = 3.14;
 	Vector2f xVector = Vector2f(cam.ang);
@@ -73,5 +86,5 @@ void Sprite::DrawWorldspace(
 
 	float screenAng = ang - cam.ang;
 	Vector2f screenSize = size * (wnd->getSize().x / fovx);
-	this->DrawScreenspace(wnd, screenPos, screenAng, screenSize);
+	this->DrawScreenspace(wnd, screenPos, screenAng, screenSize, orientation);
 }

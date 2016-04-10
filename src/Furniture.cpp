@@ -25,7 +25,7 @@ void Furniture::Update(float dt)
 
 void Furniture::Draw()
 {
-	sprite.DrawWorldspace(owner->GetWindow(), particle->pos, ang, size, owner->camera);
+	sprite.DrawWorldspace(owner->GetWindow(), particle->pos, ang, size, owner->camera, "right");
 }
 
 Vector2f Furniture::GetPosition()

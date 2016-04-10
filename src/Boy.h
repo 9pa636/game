@@ -2,6 +2,7 @@
 #include "GameSystem.h"
 #include "Sprite.h"
 #include "ParticleSystem.h"
+#include <map>
 
 class Boy : public GameObject 
 {
@@ -12,6 +13,7 @@ public:
 	void Draw();
 	Vector2f GetPosition();
 	
+
 private:
 	Sprite sprite;
 	Particle *particle;
@@ -20,4 +22,8 @@ private:
 	Vector2f size;
 	Vector2f pos;
 	float time;
+	float time1;
+	int n;
+	string orientation;
+	
 };

@@ -20,7 +20,7 @@ void StaticObj::Update(float dt)
 
 void StaticObj::Draw()
 {
-	sprite.DrawWorldspace(owner->GetWindow(), particle->pos, ang, size, owner->camera);
+	sprite.DrawWorldspace(owner->GetWindow(), particle->pos, ang, size, owner->camera, "right");
 	//	std::cout << "Ship draw";
 	//	Sprite sprite1 = Sprite("data/space.jpg");
 	//	sprite1.Draw(owner->GetWindow(), Vector2f(100.0, 100.0), 0, Vector2f(700.0, 700.0));
