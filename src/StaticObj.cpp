@@ -9,7 +9,7 @@ StaticObj::StaticObj(GameSystem *owner, Vector2f pos, float ang, Vector2f size)
 	this->ang = ang;
 	this->size = size;
 	this->pos = pos;
-	this->sprite = Sprite("data/room1.png");
+	this->sprite = Sprite("data/room2.png");
 
 }
 

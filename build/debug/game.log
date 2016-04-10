@@ -1,36 +1,20 @@
-﻿Build started 08.04.2016 20:44:15.
-     1>Project "D:\todo\РТ\4 семестр\прога\Project\game111\project\game\game.vcxproj" on node 2 (Rebuild target(s)).
+﻿Build started 10.04.2016 14:50:57.
+     1>Project "D:\todo\РТ\4 семестр\прога\Project\game\project\game\game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\todo\РТ\4 семестр\прога\Project\game111\project\deps\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\\" /Fd"D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Boy.cpp ..\..\src\GameSystem.cpp ..\..\src\main.cpp ..\..\src\Sprite.cpp ..\..\src\StaticObj.cpp ..\..\src\Vector2f.cpp
-         Vector2f.cpp
-         StaticObj.cpp
-         Sprite.cpp
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\sprite.cpp(47): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\sprite.cpp(48): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\sprite.cpp(49): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\sprite.cpp(61): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\sprite.cpp(63): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-         main.cpp
-         GameSystem.cpp
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\gamesystem.cpp(20): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\gamesystem.cpp(21): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\gamesystem.cpp(22): warning C4244: '=' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\gamesystem.cpp(74): warning C4018: '<' : signed/unsigned mismatch
-         Boy.cpp
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\boy.cpp(18): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\todo\рт\4 семестр\прога\project\game111\src\boy.cpp(19): warning C4305: 'initializing' : truncation from 'double' to 'float'
-         Generating Code...
-     1>cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\todo\РТ\4 семестр\прога\Project\game\project\deps\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\\" /Fd"D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Monster.cpp
+         Monster.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\todo\РТ\4 семестр\прога\Project\game111\project\..\bin\game.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\todo\РТ\4 семестр\прога\Project\game111\project\deps\SFML-2.3.2\lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\todo\РТ\4 семестр\прога\Project\game111\project\..\bin\game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\todo\РТ\4 семестр\прога\Project\game111\project\..\bin\game.lib" /MACHINE:X86 "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\Boy.obj"
-         "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\GameSystem.obj"
-         "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\main.obj"
-         "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\Sprite.obj"
-         "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\StaticObj.obj"
-         "D:\todo\РТ\4 семестр\прога\Project\game111\project\..\build\debug\Vector2f.obj"
-         game.vcxproj -> D:\todo\РТ\4 семестр\прога\Project\game111\project\..\bin\game.exe
-     1>Done Building Project "D:\todo\РТ\4 семестр\прога\Project\game111\project\game\game.vcxproj" (Rebuild target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\todo\РТ\4 семестр\прога\Project\game\project\..\bin\game.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\todo\РТ\4 семестр\прога\Project\game\project\deps\SFML-2.3.2\lib" "sfml-system-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\todo\РТ\4 семестр\прога\Project\game\project\..\bin\game.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\todo\РТ\4 семестр\прога\Project\game\project\..\bin\game.lib" /MACHINE:X86 "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\Boy.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\Furniture.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\GameSystem.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\main.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\Monster.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\Sprite.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\StaticObj.obj"
+         "D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\Vector2f.obj"
+         game.vcxproj -> D:\todo\РТ\4 семестр\прога\Project\game\project\..\bin\game.exe
+     1>Done Building Project "D:\todo\РТ\4 семестр\прога\Project\game\project\game\game.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.88
+Time Elapsed 00:00:02.22
