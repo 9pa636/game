@@ -2,14 +2,14 @@
 #include "StaticObj.h"
 #include <iostream>
 
-StaticObj::StaticObj(GameSystem *owner, Vector2f pos, float ang, Vector2f size)
+StaticObj::StaticObj(GameSystem *owner, Vector2f pos, float ang, Vector2f size, string a)
 {
 	this->owner = owner;
 	this->particle = this->owner->GetParticleSystem()->AddParticle(pos, size.Length() / 2.0f);
 	this->ang = ang;
 	this->size = size;
 	this->pos = pos;
-	this->sprite = Sprite("data/room2.png");
+	this->sprite = Sprite(a);
 
 }
 

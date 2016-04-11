@@ -15,7 +15,7 @@ GameSystem::GameSystem(sf::RenderWindow *wnd, sf::Clock clock)
 	this->wnd = wnd;
 	this->clock = clock;
 
-	StaticObj *newBackground = new StaticObj(this, Vector2f(500.0, 400.0), 0, Vector2f(500.0, 300.0));
+	StaticObj *newBackground = new StaticObj(this, Vector2f(500.0, 400.0), 0, Vector2f(500.0, 300.0), "data/room2.png");
 	objects.push_back(newBackground);
 
 	Furniture *newDesk = new Furniture(this, Vector2f(680.0, 600.0), 0, Vector2f(120.0, 70.0), "data/desk2.png");
@@ -45,6 +45,8 @@ GameSystem::GameSystem(sf::RenderWindow *wnd, sf::Clock clock)
 	Monster *newMonster = new Monster(this, Vector2f(800.0, 200.0), 0, Vector2f(80.0, 80.0), "data/monster1.png" );
 	objects.push_back(newMonster);
 
+/*	StaticObj *newMenu = new StaticObj(this, Vector2f(500.0, 20.0), 0, Vector2f(500.0, 40.0), "data/menu.jpg");
+	objects.push_back(newMenu);*/
 	
 
 	this->camera.pos.x = wnd->getSize().x / 2.0;

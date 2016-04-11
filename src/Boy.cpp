@@ -9,7 +9,7 @@ string getTex(int a)
 {
 	std::map<int, std::string> boyTex;
 	boyTex[0] = "data/boy/0.png";
-/*	boyTex[1] = "data/boy/1.png";
+	boyTex[1] = "data/boy/1.png";
 	boyTex[2] = "data/boy/2.png";
 	boyTex[3] = "data/boy/3.png";
 	boyTex[4] = "data/boy/4.png";
@@ -19,8 +19,8 @@ string getTex(int a)
 	boyTex[8] = "data/boy/8.png";
 	boyTex[9] = "data/boy/9.png";
 	boyTex[10] = "data/boy/10.png";
-	boyTex[0] = "data/boy/0.png";*/
-	boyTex[1] = "data/boy/1.gif";
+	boyTex[0] = "data/boy/0.png";
+/*	boyTex[1] = "data/boy/1.gif";
 	boyTex[2] = "data/boy/2.gif";
 	boyTex[3] = "data/boy/3.gif";
 	boyTex[4] = "data/boy/4.gif";
@@ -29,7 +29,7 @@ string getTex(int a)
 	boyTex[7] = "data/boy/7.gif";
 	boyTex[8] = "data/boy/8.gif";
 	boyTex[9] = "data/boy/9.gif";
-	boyTex[10] = "data/boy/10.gif";
+	boyTex[10] = "data/boy/10.gif";*/
 	return boyTex[a];
 }
 

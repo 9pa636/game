@@ -1,4 +1,4 @@
-﻿Build started 11.04.2016 1:27:39.
+﻿Build started 12.04.2016 0:34:12.
      1>Project "D:\todo\РТ\4 семестр\прога\Project\game\project\game\game.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\todo\РТ\4 семестр\прога\Project\game\project\deps\SFML-2.3.2\include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\\" /Fd"D:\todo\РТ\4 семестр\прога\Project\game\project\..\build\debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\src\Boy.cpp
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.21
+Time Elapsed 00:00:03.01
