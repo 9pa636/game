@@ -5,31 +5,42 @@
 #include <string>
 using namespace std;
 
-string getTex(int a)
+string getTex(int a, string move)
 {
 	std::map<int, std::string> boyTex;
-	boyTex[0] = "data/boy/0.png";
-	boyTex[1] = "data/boy/1.png";
-	boyTex[2] = "data/boy/2.png";
-	boyTex[3] = "data/boy/3.png";
-	boyTex[4] = "data/boy/4.png";
-	boyTex[5] = "data/boy/5.png";
-	boyTex[6] = "data/boy/6.png";
-	boyTex[7] = "data/boy/7.png";
-	boyTex[8] = "data/boy/8.png";
-	boyTex[9] = "data/boy/9.png";
-	boyTex[10] = "data/boy/10.png";
-	boyTex[0] = "data/boy/0.png";
-/*	boyTex[1] = "data/boy/1.gif";
-	boyTex[2] = "data/boy/2.gif";
-	boyTex[3] = "data/boy/3.gif";
-	boyTex[4] = "data/boy/4.gif";
-	boyTex[5] = "data/boy/5.gif";
-	boyTex[6] = "data/boy/6.gif";
-	boyTex[7] = "data/boy/7.gif";
-	boyTex[8] = "data/boy/8.gif";
-	boyTex[9] = "data/boy/9.gif";
-	boyTex[10] = "data/boy/10.gif";*/
+
+	if (move == "walk")
+	{
+		boyTex[0] = "data/walk/00.png";
+		boyTex[1] = "data/walk/01.png";
+		boyTex[2] = "data/walk/02.png";
+		boyTex[3] = "data/walk/03.png";
+		boyTex[4] = "data/walk/04.png";
+		boyTex[5] = "data/walk/05.png";
+		boyTex[6] = "data/walk/06.png";
+		boyTex[7] = "data/walk/07.png";
+		boyTex[8] = "data/walk/08.png";
+		boyTex[9] = "data/walk/09.png";
+		boyTex[10] = "data/walk/010.png";
+	}
+	else
+	{
+//		boyTex[0] = "data/jump/00.png";
+		boyTex[1] = "data/jump/1.png";
+		boyTex[2] = "data/jump/2.png";
+		boyTex[3] = "data/jump/3.png";
+		boyTex[4] = "data/jump/4.png";
+		boyTex[5] = "data/jump/5.png";
+		boyTex[6] = "data/jump/6.png";
+		boyTex[7] = "data/jump/7.png";
+		boyTex[8] = "data/jump/8.png";
+		boyTex[9] = "data/jump/9.png";
+		boyTex[10] = "data/jump/10.png";
+		boyTex[11] = "data/jump/11.png";
+		boyTex[12] = "data/jump/12.png";
+		boyTex[13] = "data/jump/13.png";
+	}
+
 	return boyTex[a];
 }
 
@@ -48,7 +59,7 @@ Boy::Boy(GameSystem *owner, Vector2f pos, float ang, Vector2f size)
 	this->ang = ang;
 	this->size = size;
 	this->pos = pos;
-	this->sprite = Sprite("data/boy/0.png");
+	this->sprite = Sprite("data/walk/00.png");
 	this->time = owner->GetTime();
 	this->n = 0;
 	this->orientation = "right";
@@ -56,15 +67,30 @@ Boy::Boy(GameSystem *owner, Vector2f pos, float ang, Vector2f size)
 
 void Boy::Update(float dt)
 {
-	float force = 0.0001;
+	float force = 0.00001;
 	float step = 0.1;
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
 	{
-		this->particle->Push(Vector2f(sinf(ang)*force, -cosf(ang)*force));
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-	{
-		this->particle->Push(Vector2f(-sinf(ang)*force, cosf(ang)*force));
+//		this->orientation = "right";
+		if (owner->GetTime() - this->time1 > 0.0008)
+		{
+			if (owner->GetTime() - this->time > 0.1)
+			{
+				if (this->n <= 13)
+				{
+					this->sprite = Sprite(getTex(this->n, "jump"));
+					n++;
+				}
+				else
+					this->n = 1;
+				this->time = owner->GetTime();
+			}
+			
+		//	this->particle->pos.y -= force;
+		//	this->particle->Integrate(dt);
+			this->time1 = owner->GetTime();
+		}
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 	{
@@ -75,7 +101,7 @@ void Boy::Update(float dt)
 			{		
 				if (this->n <= 10)
 				{
-					this->sprite = Sprite(getTex(this->n));
+					this->sprite = Sprite(getTex(this->n, "walk"));
 					n++;
 				}
 				else
@@ -96,7 +122,7 @@ void Boy::Update(float dt)
 				{
 					if (this->n <= 10)
 					{
-						this->sprite = Sprite(getTex(this->n));
+						this->sprite = Sprite(getTex(this->n, "walk"));
 						n++;
 					}
 					else

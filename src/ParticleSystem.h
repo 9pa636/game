@@ -8,7 +8,7 @@ public:
 	void Integrate(float dt)
 	{
 		Vector2f currPos = pos;
-		pos = pos + (pos - prevPos); // + acceleration * dt * dt;
+		pos = pos + (pos - prevPos) + acceleration * dt * dt;
 		prevPos = currPos;
 	}
 	/*

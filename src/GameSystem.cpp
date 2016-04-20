@@ -39,7 +39,7 @@ GameSystem::GameSystem(sf::RenderWindow *wnd, sf::Clock clock)
 	Furniture *newLamp = new Furniture(this, Vector2f(500.0, 240.0), 0, Vector2f(230.0, 140.0), "data/lamp2.png");
 	objects.push_back(newLamp);
 
-	Boy *newBoy = new Boy(this, Vector2f(350.0, 560.0), 0, Vector2f(80.0, 130.0));
+	Boy *newBoy = new Boy(this, Vector2f(350.0, 555.0), 0, Vector2f(60.0, 145.0));
 	objects.push_back(newBoy);
 
 	Monster *newMonster = new Monster(this, Vector2f(800.0, 200.0), 0, Vector2f(80.0, 80.0), "data/monster1.png" );
